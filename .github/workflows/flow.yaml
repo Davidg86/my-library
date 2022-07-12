@@ -15,6 +15,9 @@ jobs:
     runs-on: ${{matrix.os}}
     steps: 
       - run: ls -la
+        if: ${{runner.os=='linux' || runner.os == 'macos' }}
+      - run: dir
+        if: ${{runner.os== 'windows'}}
       - uses: actions/checkout@v3
       - run: ls -la
       - name: "Installation de Node"
