@@ -7,4 +7,6 @@ jobs:
     name: "my job"
     runs-on: ubuntu-latest
     steps: 
-      - run: echo "Coucou" 
+      - run: ls -la
+      -uses: actions/checkout@v3
+      -run ls -la
