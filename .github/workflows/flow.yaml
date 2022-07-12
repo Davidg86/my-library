@@ -20,3 +20,6 @@ jobs:
       - run: node -v
       - run: echo ${{github.actor}}
       - run: node dummy.js
+        env: 
+         DATABASE_NAME: "Override in DB"
+
